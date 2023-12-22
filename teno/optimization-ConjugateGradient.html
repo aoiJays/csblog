@@ -19,18 +19,28 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog,Gallery,AoiJays,Neworld1111,C++">
     
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://cs.aoijays.top/archives/2023/12/index.html">
+    <meta name="description" content="最速下降法[TOC] 最速下降方向方向导数函数$f(x)$在点$x$处沿着方向$d$的变化率，即为方向导数 对于可微导数，方向导数可由梯度得到：$$\bigtriangledown f(x;d) &#x3D; \bigtriangledown ^Tf(x)d$$即梯度与$d$的点积。 负梯度方向柯西施瓦茨不等式$$|a| |b| \geq |ab|$$ 求解最速下降方向目标是找到一个方向$d$，使">
+<meta property="og:type" content="website">
+<meta property="og:title" content="最优化方法 - 2.最速下降法">
+<meta property="og:url" content="http://cs.aoijays.top/teno/optimization-ConjugateGradient.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="最速下降法[TOC] 最速下降方向方向导数函数$f(x)$在点$x$处沿着方向$d$的变化率，即为方向导数 对于可微导数，方向导数可由梯度得到：$$\bigtriangledown f(x;d) &#x3D; \bigtriangledown ^Tf(x)d$$即梯度与$d$的点积。 负梯度方向柯西施瓦茨不等式$$|a| |b| \geq |ab|$$ 求解最速下降方向目标是找到一个方向$d$，使">
 <meta property="og:locale">
+<meta property="og:image" content="c:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231217205605284.png">
+<meta property="og:image" content="c:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231217210557509.png">
+<meta property="og:image" content="c:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231217210740299.png">
+<meta property="og:image" content="c:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231217211210307.png">
+<meta property="article:published_time" content="2023-12-17T11:20:53.000Z">
+<meta property="article:modified_time" content="2023-12-17T13:15:25.902Z">
 <meta property="article:author" content="aoiJays">
+<meta property="article:tag" content="最优化">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231217205605284.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
     
-    <title>AoiJays&#39;s Space.</title>
+    <title>最优化方法 - 2.最速下降法 · AoiJays&#39;s Space.</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -420,59 +430,110 @@
 
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
-                <main class="main index-page">
-    
-        
-        
-        
-        
-            
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/12/22/acm-20231222/">
-                
-                <span class="abstract-title-text">CF1907E. Good Triples</span>
-            </a>
-            <div class="abstract-content">
-                数值进位
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/12/22">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/12/22</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="ACM"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                ACM
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="ACM">ACM</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="数学">数学</a>
-    
-</div>
+                <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="最速下降法"><a href="#最速下降法" class="headerlink" title="最速下降法"></a>最速下降法</h1><p>[TOC]</p>
+<h2 id="最速下降方向"><a href="#最速下降方向" class="headerlink" title="最速下降方向"></a>最速下降方向</h2><h3 id="方向导数"><a href="#方向导数" class="headerlink" title="方向导数"></a>方向导数</h3><p>函数$f(x)$在点$x$处沿着方向$d$的变化率，即为方向导数</p>
+<p>对于可微导数，方向导数可由梯度得到：<br>$$<br>\bigtriangledown f(x;d) &#x3D; \bigtriangledown ^Tf(x)d<br>$$<br>即梯度与$d$的点积。</p>
+<h3 id="负梯度方向"><a href="#负梯度方向" class="headerlink" title="负梯度方向"></a>负梯度方向</h3><h4 id="柯西施瓦茨不等式"><a href="#柯西施瓦茨不等式" class="headerlink" title="柯西施瓦茨不等式"></a>柯西施瓦茨不等式</h4><p>$$<br>|a| |b| \geq |ab|<br>$$</p>
+<h4 id="求解最速下降方向"><a href="#求解最速下降方向" class="headerlink" title="求解最速下降方向"></a>求解最速下降方向</h4><p>目标是找到一个方向$d$，使得梯度最小（梯度为负值），因此沿此方向梯度下降最快<br>$$<br>\min \quad \bigtriangledown f(x;d) \<br>s.t. \quad ||d|| \leq 1<br>$$<br>转化为：</p>
+<p>$$<br>\min \quad  \bigtriangledown ^Tf(x)d\<br>s.t. \quad ||d|| \leq 1<br>$$<br>由柯西施瓦茨不等式，且$||d|| \leq 1$：<br>$$<br>|\bigtriangledown ^Tf(x)d | \leq ||\bigtriangledown f(x)||\times ||d|| \leq ||\bigtriangledown f(x)||<br>$$<br> 拆开绝对值：<br>$$</p>
+<ul>
+<li>||\bigtriangledown f(x)|| \leq \bigtriangledown ^Tf(x)d   \leq ||\bigtriangledown f(x)||<br>$$<br>则：$- ||\bigtriangledown f(x)||$为方向导数的最小值<br>$$</li>
+<li>||\bigtriangledown f(x)|| \leq \bigtriangledown ^Tf(x)d   \<br> ||\bigtriangledown f(x)||^2 &#x3D; \bigtriangledown ^Tf(x) \bigtriangledown f(x)<br>$$<br>所以<br>$$<br>d &#x3D;  -\frac{\bigtriangledown f(x)}{ ||\bigtriangledown f(x)||}<br>$$<br>即为<strong>梯度的负方向</strong></li>
+</ul>
+<h2 id="最速下降法-1"><a href="#最速下降法-1" class="headerlink" title="最速下降法"></a>最速下降法</h2><ul>
+<li>给定初点</li>
+<li>计算最速下降方向</li>
+<li>进行<strong>精确的一维搜索</strong></li>
+<li>得到新点，迭代</li>
+</ul>
+<h3 id="二次型函数迭代"><a href="#二次型函数迭代" class="headerlink" title="二次型函数迭代"></a>二次型函数迭代</h3><blockquote>
+<p>  二次型$Q(x) &#x3D; x^TAx$，其中$A$是$n \times n$的对称矩阵</p>
+</blockquote>
+<p>若二次型函数满足：<br>$$<br>f(x) &#x3D; \frac{1}{2}x^TQx-b^Tx<br>$$<br>令$g_k &#x3D; \bigtriangledown f(x_k )$</p>
+<p>假设当前迭代点为$x_k$，则精确一维搜索函数为：<br>$$<br>\varphi(\alpha) &#x3D; f(x_k+(-g_k)\alpha) &#x3D; f(x_k-g_k\alpha)<br>$$</p>
+<p>为求解该函数最小值，我们代入$f(x)$<br>$$<br>f(x) &#x3D; \frac{1}{2}(x_k-g_k\alpha)^TQ(x_k-g_k\alpha) - b^T(x_k-g_k\alpha)<br>$$<br>我们分段仔细算一遍：<br>$$<br>x^TQx &#x3D; (x^TQ)x \</p>
+<p>\frac{1}{2}(x_k-g_k\alpha)^TQ(x_k-g_k\alpha) &#x3D; \frac{1}{2}(x_k^TQ-g_k^TQ\alpha)(x_k-g_k\alpha)<br>$$<br>所以等于：<br>$$<br>\frac{1}{2}( x_k^TQx_k - g_k^TQx_k\alpha-x_k^TQg_k\alpha+g_k^TQg_k\alpha^2)<br>$$<br>对于右边部分的$ b^T(x_k-g_k\alpha)$</p>
+<p>一样拆开：<br>$$<br>b^Tx_k-b^Tg_k\alpha<br>$$</p>
+<p>最后得到：<br>$$<br>\varphi(\alpha) &#x3D;\frac{1}{2}( x_k^TQx_k - g_k^TQx_k\alpha-x_k^TQg_k\alpha+g_k^TQg_k\alpha^2) -b^Tx_k+b^Tg_k\alpha<br>$$<br>对$\alpha$求导：<br>$$<br>\varphi’(\alpha) &#x3D; \frac{1}{2}(-g^T_kQx_k-x_k^TQg_k+2g^T_kQg_k\alpha)  + b^Tg_k<br>$$<br>又$g_k^Tx_k &#x3D; x^Tg_k$<br>$$<br>\varphi’(\alpha) &#x3D; g_k^TQg_k\alpha-x_k^TQg_k+b^Tg_k &#x3D; 0<br>$$<br>移项：<br>$$<br>\alpha &#x3D; \frac{ x^TQg_k-b^Tg_k }{g^T_kQg_k}<br>$$<br>我们会发现：$g_k &#x3D; Qx_k - b$</p>
+<p>因此$x^TQ-b^T &#x3D; g_k^T$</p>
+<p>最后：<br>$$<br>\alpha &#x3D; \frac{g^T_kg_k}{g^T_kQg_k}<br>$$</p>
+<p>因此我们发现我们可以通过：<br>$$<br>x_{k+1} &#x3D; x_k - \alpha g_k &#x3D; x_k - \frac{g^T_kg_k}{g^T_kQg_k} g_k<br>$$<br>直接计算出下一个迭代点</p>
+<blockquote>
+<p>  你会发现上面的求导过程是不是有一点阴间，我们重新求一次<br>  $$<br>  \varphi(\alpha) &#x3D; f(x_k-g_k\alpha) \<br>  \varphi’(\alpha) &#x3D; g(x_k-g_k\alpha)^T(-g_k) &#x3D; [Q^T(x_k-g_k\alpha)-b]^T(-g_k) \<br>  \varphi’(\alpha) &#x3D; g_k^TQg_k\alpha-x_k^TQg_k+b^Tg_k &#x3D; 0<br>  $$<br>  是的。这里就做完了</p>
+</blockquote>
+<h4 id="锯齿现象"><a href="#锯齿现象" class="headerlink" title="锯齿现象"></a>锯齿现象</h4><p>令第$k$次的搜索方向为$d_k$<br>$$<br>\varphi(\alpha) &#x3D; f(x_k-g_k\alpha) \<br>\varphi’(\alpha) &#x3D; g(x_k-g_k\alpha)^T(-g_k) &#x3D; 0<br>$$<br>你会发现：$-g_k &#x3D; d_k, g(x_k-g_k\alpha) &#x3D; g_{k+1} &#x3D; -d_{k+1} $</p>
+<p>因此：<br>$$<br>d_{k+1}^T d_k &#x3D; 0<br>$$<br>两次搜索方向正交</p>
+<p>出现锯齿现象</p>
+<img src="C:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231217205605284.png" alt="image-20231217205605284" style="zoom:67%;" />
 
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
+<blockquote>
+<p>  在迭代开始阶段，一般搜索步长应该大一些；越往后应该越小。</p>
+</blockquote>
+<h3 id="收敛性"><a href="#收敛性" class="headerlink" title="收敛性"></a>收敛性</h3><h4 id="特征值"><a href="#特征值" class="headerlink" title="特征值"></a>特征值</h4><img src="C:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231217210557509.png" alt="image-20231217210557509" style="zoom:67%;" />
+
+<h4 id="收敛性-1"><a href="#收敛性-1" class="headerlink" title="收敛性"></a>收敛性</h4><p>$$<br>(\frac{A-a}{A+a})^2<br>$$</p>
+<p>$A$表示最大的特征值,$a$表示最小的特征值</p>
+<img src="C:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231217210740299.png" alt="image-20231217210740299" style="zoom:50%;" />
+
+<ul>
+<li><p>线性收敛</p>
+</li>
+<li><p>条件数$\frac{A}{a}$</p>
+<ul>
+<li><p>$$<br>(\frac{A-a}{A+a})^2 &#x3D;( \frac{A&#x2F;a -1}{A&#x2F;a + 1}) ^2 &#x3D; (\frac{r-1}{r+1})^2 &lt; 1<br>$$</p>
+</li>
+<li><img src="C:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231217211210307.png" alt="image-20231217211210307" style="zoom:67%;" />
+</li>
+<li><p>条件数越小，压缩更高，收敛更快</p>
+</li>
+</ul>
+</li>
+</ul>
+
+    </article>
+    <!-- license -->
     
-    <!-- paginator  -->
+    <!-- paginator -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+        </li>
+    </ul>
+    <!-- comment -->
+    
+        <div class="post-comment">
+            <!-- 来必力 City 版安装代码 -->
+
+
+            
+
+            
+
+            
+
+            <!-- utteranc评论 -->
+
+
+            <!-- partial('_partial/comment/changyan') -->
+            <!--PC版-->
+
+
+            
+            
+
+            
+
+        </div>
+    
+    <!-- timeliness note -->
+    <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
+    
+    <!-- Mathjax -->
     
 </main>
 

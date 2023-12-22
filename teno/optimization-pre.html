@@ -19,18 +19,36 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog,Gallery,AoiJays,Neworld1111,C++">
     
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://cs.aoijays.top/archives/2023/12/index.html">
+    <meta name="description" content="预备知识[TOC] 数学知识向量范数  $L_1 &#x3D; \sum |x_i|$ $L_2 &#x3D; \sum \sqrt{x_i^2}$ $L_\infin &#x3D; \max(|x_i|)$ $L_p &#x3D; \sum |x_i^p|^{\frac{1}{p}}$    任意两种范数等价  范数定义了距离，才能通过极限去收敛 梯度与Hesse矩阵 特殊函数 $f(x) &amp;#">
+<meta property="og:type" content="website">
+<meta property="og:title" content="最优化方法 - 预备知识">
+<meta property="og:url" content="http://cs.aoijays.top/teno/optimization-pre.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="预备知识[TOC] 数学知识向量范数  $L_1 &#x3D; \sum |x_i|$ $L_2 &#x3D; \sum \sqrt{x_i^2}$ $L_\infin &#x3D; \max(|x_i|)$ $L_p &#x3D; \sum |x_i^p|^{\frac{1}{p}}$    任意两种范数等价  范数定义了距离，才能通过极限去收敛 梯度与Hesse矩阵 特殊函数 $f(x) &amp;#">
 <meta property="og:locale">
+<meta property="og:image" content="c:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231213151833824.png">
+<meta property="og:image" content="c:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231213152532440.png">
+<meta property="og:image" content="c:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231213153523183.png">
+<meta property="og:image" content="c:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231212202352838.png">
+<meta property="og:image" content="c:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231212203253120.png">
+<meta property="og:image" content="c:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231212205644242.png">
+<meta property="og:image" content="c:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231212210930097.png">
+<meta property="og:image" content="c:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231212211841296.png">
+<meta property="og:image" content="c:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231212212818790.png">
+<meta property="og:image" content="c:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231212200953379.png">
+<meta property="og:image" content="c:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231212201350089.png">
+<meta property="og:image" content="c:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231212201402370.png">
+<meta property="article:published_time" content="2023-12-12T11:20:53.000Z">
+<meta property="article:modified_time" content="2023-12-21T09:14:10.138Z">
 <meta property="article:author" content="aoiJays">
+<meta property="article:tag" content="最优化">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231213151833824.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
     
-    <title>AoiJays&#39;s Space.</title>
+    <title>最优化方法 - 预备知识 · AoiJays&#39;s Space.</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -420,59 +438,193 @@
 
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
-                <main class="main index-page">
-    
-        
-        
-        
-        
-            
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/12/22/acm-20231222/">
-                
-                <span class="abstract-title-text">CF1907E. Good Triples</span>
-            </a>
-            <div class="abstract-content">
-                数值进位
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/12/22">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/12/22</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="ACM"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                ACM
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="ACM">ACM</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="数学">数学</a>
-    
-</div>
+                <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h1><p>[TOC]</p>
+<h2 id="数学知识"><a href="#数学知识" class="headerlink" title="数学知识"></a>数学知识</h2><h3 id="向量范数"><a href="#向量范数" class="headerlink" title="向量范数"></a>向量范数</h3><p><img src="C:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231213151833824.png" alt="image-20231213151833824"></p>
+<ul>
+<li>$L_1 &#x3D; \sum |x_i|$</li>
+<li>$L_2 &#x3D; \sum \sqrt{x_i^2}$</li>
+<li>$L_\infin &#x3D; \max(|x_i|)$</li>
+<li>$L_p &#x3D; \sum |x_i^p|^{\frac{1}{p}}$</li>
+</ul>
+<p><img src="C:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231213152532440.png" alt="image-20231213152532440"></p>
+<ul>
+<li><strong>任意两种范数等价</strong></li>
+</ul>
+<p>范数定义了距离，才能通过极限去收敛</p>
+<h3 id="梯度与Hesse矩阵"><a href="#梯度与Hesse矩阵" class="headerlink" title="梯度与Hesse矩阵"></a>梯度与Hesse矩阵</h3><p><img src="C:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231213153523183.png" alt="image-20231213153523183"></p>
+<h4 id="特殊函数"><a href="#特殊函数" class="headerlink" title="特殊函数"></a>特殊函数</h4><ul>
+<li>$f(x) &#x3D; c^Tx$<ul>
+<li>$\bigtriangledown f(x) &#x3D; c$</li>
+<li>$H(x) &#x3D; \bigtriangledown^2f(x) &#x3D; 0$</li>
+</ul>
+</li>
+<li>$f(x) &#x3D; \frac{1}{2}x^TAx+b^Tx+c, A^T&#x3D;A$<ul>
+<li>$\bigtriangledown f(x) &#x3D; Ax + b$</li>
+<li>$H(x) &#x3D; \bigtriangledown^2f(x) &#x3D; A$</li>
+</ul>
+</li>
+</ul>
+<h3 id="泰勒展开"><a href="#泰勒展开" class="headerlink" title="泰勒展开"></a>泰勒展开</h3><ul>
+<li>一阶泰勒展开：$f(x) &#x3D; f(x_0) + \bigtriangledown f(x_0)^T(x-x_0)$</li>
+<li>二阶泰勒展开：$f(x) &#x3D; f(x_0) + \bigtriangledown f(x_0)^T(x-x_0) + \frac{1}{2}(x-x_0)^TH(x_0)(x-x_0)$</li>
+</ul>
+<h3 id="凸集"><a href="#凸集" class="headerlink" title="凸集"></a>凸集</h3><h4 id="凸组合"><a href="#凸组合" class="headerlink" title="凸组合"></a>凸组合</h4><p>$$<br>X_i &#x3D; X_2 + \lambda(X_1 -X_2) &#x3D; \lambda X_1 +(1-\lambda)X_2 \<br>0 \leq \lambda \leq 1<br>$$</p>
+<p>即可以表示两点连线上的任意一点</p>
+<p><img src="C:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231212202352838.png" alt="image-20231212202352838"></p>
+<h4 id="典例"><a href="#典例" class="headerlink" title="典例"></a>典例</h4><ul>
+<li>超平面$p^Tx &#x3D; \alpha$是凸集</li>
+<li>半空间$p^Tx \leq \alpha$是凸集</li>
+</ul>
+<p><img src="C:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231212203253120.png" alt="image-20231212203253120"></p>
+<ul>
+<li><p>射线或直线：$x_0 + \lambda d$</p>
+</li>
+<li><p>凸锥</p>
+<ul>
+<li>锥：对于集合$C$中任何一个向量$x$，若$\forall x, \lambda x \in C, 0 \leq \lambda$，则称为锥</li>
+<li>凸锥：是凸集的锥</li>
+</ul>
+</li>
+<li><p>多面集：有限个半空间的交</p>
+<ul>
+<li>$x \in R^n$，有$m$个半空间</li>
+<li>$Ax \leq b$</li>
+<li>$A$为$m \times n$的矩阵，$b$为$m$维向量</li>
+<li>$b &#x3D; 0$时，为凸锥</li>
+</ul>
+</li>
+<li><p>超球：$||x|| \leq r$</p>
+<ul>
+<li>证明：$||\lambda x_1 + (1-\lambda)x_2|| \leq ||\lambda x_1 || + || (1-\lambda)x_2|| \leq \lambda r + (1-\lambda)r &#x3D; r  $</li>
+</ul>
+</li>
+</ul>
+<h4 id="凸集的表示"><a href="#凸集的表示" class="headerlink" title="凸集的表示"></a>凸集的表示</h4><ul>
+<li>极点：不能成为另外两个点的凸组合<ul>
+<li>若存在$x &#x3D; \lambda x_1 + (1-\lambda)x_2$，则必有$x &#x3D; x_1 &#x3D; x_2$</li>
+<li>紧凸集：任意一点均可以被极点组成（凸锥不是，因为无界无限）</li>
+<li>闭凸集：（凸集不一定包含边界）凸集包含了其闭包（边界）。</li>
+</ul>
+</li>
+</ul>
+<p><img src="C:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231212205644242.png" alt="image-20231212205644242"></p>
+<ul>
+<li>极方向<ul>
+<li>方向：所有点在方向向量$d$的所有点都属于凸集，则$d$称为凸集的方向</li>
+<li>极方向：不能被其他方向表示的方向<ul>
+<li>所有方向都可以被极方向表示</li>
+</ul>
+</li>
+<li>有界集不存在方向（显然会出界）</li>
+</ul>
+</li>
+</ul>
+<p><img src="C:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231212210930097.png" alt="image-20231212210930097"></p>
+<h4 id="凸函数"><a href="#凸函数" class="headerlink" title="凸函数"></a>凸函数</h4><p><img src="C:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231212211841296.png" alt="image-20231212211841296"></p>
+<ul>
+<li>取等号：凸函数，不取等号：严格凸函数</li>
+<li>判断凸函数：一阶充要条件</li>
+</ul>
+<p><img src="C:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231212212818790.png" alt="image-20231212212818790"></p>
+<ul>
+<li>判断凸函数二阶充要条件：任意一点$x$的$H(x)$半正定<ul>
+<li>感性理解：二阶导恒大于等于0，一阶导单调不降，最多一个0点。</li>
+</ul>
+</li>
+</ul>
+<h4 id="局部极值点条件"><a href="#局部极值点条件" class="headerlink" title="局部极值点条件"></a>局部极值点条件</h4><ul>
+<li><p>一阶必要条件：</p>
+<ul>
+<li>$\bigtriangledown f(x) &#x3D; 0$</li>
+</ul>
+</li>
+<li><p>二阶必要条件</p>
+<ul>
+<li>$\bigtriangledown f(x) &#x3D; 0$</li>
+<li>$H(x)$ 半正定（可以理解为一元函数二阶导数大于等于0）</li>
+</ul>
+</li>
+<li><p>二阶充要条件</p>
+<ul>
+<li>$\bigtriangledown f(x) &#x3D; 0$</li>
+<li>$H(x)$ 正定（可以理解为一元函数二阶导数大于0）</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>  正定矩阵：对于一个实对称矩阵$A$，若$x^TAx &gt; 0$恒成立，则$A$正定。</p>
+<p>  半正定矩阵：对于一个实对称矩阵$A$，若$x^TAx \geq 0$恒成立，则$A$半正定。</p>
+</blockquote>
+<h4 id="凸优化"><a href="#凸优化" class="headerlink" title="凸优化"></a>凸优化</h4><p>定义在凸集上的凸函数最优化问题。局部解就是全局解。</p>
+<p>设$x$为局部最优解，存在$y$为全局最优解满足$f(y) &lt;f(x)$。</p>
+<p>$x,y$的连线上的所有点：$\lambda x+ (1-\lambda)y$均在定义域凸集内</p>
+<p>又$x$的领域内有：$\forall x^* \in D, f(x) \leq f(x^*)$</p>
+<p>$f(\lambda x+ (1-\lambda)y)$为凸函数，且$f(y)$为最小值</p>
+<p>则$f(\lambda x+ (1-\lambda)y) \leq \lambda f(x) + (1-\lambda) f(y) $</p>
+<p>$\lambda f(x) + (1-\lambda) f(y) &lt; \lambda f(x) + (1-\lambda)f(x) &#x3D; f(x)$</p>
+<p>故$f(\lambda x+ (1-\lambda)y) &lt; f(x)$，当$\lambda$趋近于1时，$\lambda x+ (1-\lambda)y$在$x$的领域$D$中</p>
+<p>与$\forall x^* \in D, f(x) \leq f(x^*)$矛盾</p>
+<h2 id="最优化模型"><a href="#最优化模型" class="headerlink" title="最优化模型"></a>最优化模型</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p><img src="C:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231212200953379.png" alt="image-20231212200953379"></p>
+<ul>
+<li><strong>三要素：目标函数、决策变量、约束条件（等式、不等式）</strong></li>
+<li>可行点：满足约束条件的点</li>
+<li>可行集：全体可行点构成的集合<ul>
+<li>可行集是整个空间 -&gt; <strong>无约束优化问题</strong></li>
+<li>否则是，<strong>约束优化问题</strong></li>
+</ul>
+</li>
+<li>全局极小点</li>
+</ul>
+<p><img src="C:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231212201350089.png" alt="image-20231212201350089"></p>
+<ul>
+<li>局部极小点</li>
+</ul>
+<p><img src="C:\Users\95443\AppData\Roaming\Typora\typora-user-images\image-20231212201402370.png" alt="image-20231212201402370"></p>
 
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
+    </article>
+    <!-- license -->
     
-    <!-- paginator  -->
+    <!-- paginator -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+        </li>
+    </ul>
+    <!-- comment -->
+    
+        <div class="post-comment">
+            <!-- 来必力 City 版安装代码 -->
+
+
+            
+
+            
+
+            
+
+            <!-- utteranc评论 -->
+
+
+            <!-- partial('_partial/comment/changyan') -->
+            <!--PC版-->
+
+
+            
+            
+
+            
+
+        </div>
+    
+    <!-- timeliness note -->
+    <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
+    
+    <!-- Mathjax -->
     
 </main>
 
