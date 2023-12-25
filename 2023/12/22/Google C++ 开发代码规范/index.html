@@ -19,18 +19,23 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog,Gallery,AoiJays,Neworld1111,C++">
     
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://cs.aoijays.top/index.html">
+    <meta name="description" content="Google C++ 开发代码规范[TOC] 命名约定   不要缩写，除非很常见的写法  文件名文件名要全部小写，可以包含下划线 (_)   my_useful_class.cc myusefulclass.cc  C++以.cc结尾，头文件以.h结尾 内联函数定义必须在.h内，若代码很短，则可直接在.h中实现 类型   类、结构体、typedef、using、枚举  首字母和每个单词首字母大写，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Google C++ 开发代码规范 · 笔记">
+<meta property="og:url" content="http://cs.aoijays.top/2023/12/22/Google%20C++%20%E5%BC%80%E5%8F%91%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Google C++ 开发代码规范[TOC] 命名约定   不要缩写，除非很常见的写法  文件名文件名要全部小写，可以包含下划线 (_)   my_useful_class.cc myusefulclass.cc  C++以.cc结尾，头文件以.h结尾 内联函数定义必须在.h内，若代码很短，则可直接在.h中实现 类型   类、结构体、typedef、using、枚举  首字母和每个单词首字母大写，">
 <meta property="og:locale">
+<meta property="article:published_time" content="2023-12-22T09:33:53.000Z">
+<meta property="article:modified_time" content="2023-12-25T06:33:23.513Z">
 <meta property="article:author" content="aoiJays">
+<meta property="article:tag" content="规范">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
     
-    <title>AoiJays&#39;s Space.</title>
+    <title>Google C++ 开发代码规范 · 笔记 · AoiJays&#39;s Space.</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -220,10 +225,10 @@
         }
     </script>
     
-        <body class="home-body">
+        <body class="post-body">
     
         <!-- header -->
-        <header class="header header-mobile index-header">
+        <header class="header header-mobile">
     <!-- top read progress line -->
     <div class="header-element">
         <div class="read-progress"></div>
@@ -251,10 +256,21 @@
     </div>
     <!-- toggle banner for post layout -->
     
+        
+            <div class="banner">
+        
+            <div class="blog-title header-element">
+                <a href="/">AoiJays&#39;s Space.</a>
+            </div>
+            <div class="post-title header-element">
+                <a href="#" class="post-name">Google C++ 开发代码规范 · 笔记</a>
+            </div>
+        </div>
+    
 </header>
 
         <!-- fixed footer -->
-        <footer class="footer-fixed index-footer-fixed">
+        <footer class="footer-fixed">
     <!-- back to top button -->
     <div class="footer-fixed-element">
         
@@ -284,17 +300,17 @@
     <!-- 主页  -->
     
         
-    <!-- 文章页  -->
+    <!-- 404页  -->
     
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-                AoiJays's Space.
-            <!-- 文章页  -->
+                Google C++ 开发代码规范 · 笔记
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -302,12 +318,63 @@
             <!-- 主页副标题  -->
             
                 
-                    Learning like a child.
-                
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页 meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="C++"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                C++
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="规范">规范</a>
+    
+</div>
+
+                
+                <!-- 文章字数统计 -->
+                
+                <div class="post-intro-meta">
+                    <!-- 撰写日期 -->
+                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
+                    <span class="post-intro-time">2023/12/22</span>
+                    <!-- busuanzi -->
+                    
+                        <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                            <span class="iconfont-archer post-intro-busuanzi">&#xe602;</span>
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    
+                    <!-- 文章分享 -->
+                    <span class="share-wrapper">
+                        <span class="iconfont-archer share-icon">&#xe71d;</span>
+                        <span class="share-text">Share</span>
+                        <ul class="share-list">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -437,298 +504,145 @@
 
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
-                <main class="main index-page">
-    
-        
-        
-        
-        
-            
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/12/25/acm-20231225-1/">
-                
-                <span class="abstract-title-text">CF1886C. Decreasing String</span>
-            </a>
-            <div class="abstract-content">
-                按字典序删除字符
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/12/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/12/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="ACM"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                ACM
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="字符串">字符串</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="单调栈">单调栈</a>
-    
-</div>
+                <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="Google-C-开发代码规范"><a href="#Google-C-开发代码规范" class="headerlink" title="Google C++ 开发代码规范"></a>Google C++ 开发代码规范</h1><p>[TOC]</p>
+<h2 id="命名约定"><a href="#命名约定" class="headerlink" title="命名约定"></a>命名约定</h2><blockquote>
+<p>  不要缩写，除非很常见的写法</p>
+</blockquote>
+<h3 id="文件名"><a href="#文件名" class="headerlink" title="文件名"></a>文件名</h3><p>文件名要全部小写，可以包含下划线 (<code>_</code>) </p>
+<ul>
+<li><code>my_useful_class.cc</code></li>
+<li><code>myusefulclass.cc</code></li>
+</ul>
+<p>C++以<code>.cc</code>结尾，头文件以<code>.h</code>结尾</p>
+<p>内联函数定义必须在<code>.h</code>内，若代码很短，则可直接在<code>.h</code>中实现</p>
+<h3 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h3><blockquote>
+<p>  类、结构体、typedef、using、枚举</p>
+</blockquote>
+<p>首字母和每个单词首字母大写，不包含下划线</p>
+<p><code>MyExcitingClass</code></p>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>包括函数参数，全部小写，单词间使用下划线 (<code>_</code>) </p>
+<p><strong>类</strong>的成员变量以下划线结尾（结构体不用）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">string table_name;  // 好 - 用下划线.</span><br><span class="line"></span><br><span class="line">class TableInfo &#123;</span><br><span class="line">  ...</span><br><span class="line"> private:</span><br><span class="line">  string table_name_;  // 好 - 后加下划线.</span><br><span class="line">  string tablename_;   // 好.</span><br><span class="line">  static Pool&lt;TableInfo&gt;* pool_;  // 好.</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p>包括静态变量、全局变量等值不发生变化的值</p>
+<p>以k开头，单词首字母大写</p>
+<p><code>const int kDaysInAWeek = 7;</code></p>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>每个单词首字母大写 <code>AddTableEntry()</code></p>
+<p>(缩写的情况：例如, 写作 <code>StartRpc()</code> 而非 <code>StartRPC()</code>).</p>
+<h3 id="宏"><a href="#宏" class="headerlink" title="宏"></a>宏</h3><p><code>MY_MACRO_THAT_SCARES_SMALL_CHILDREN</code></p>
+<p>但是别用</p>
+<h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><h3 id="define-保护"><a href="#define-保护" class="headerlink" title="define 保护"></a>define 保护</h3><p>以<code>foo/src/bar/baz.h</code>为例：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">ifndef</span> FOO_BAR_BAZ_H_</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> FOO_BAR_BAZ_H_</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span> <span class="comment">// FOO_BAR_BAZ_H_</span></span></span><br></pre></td></tr></table></figure>
+<p>即：项目名 SRC下的路径 文件名</p>
+<h3 id="inline"><a href="#inline" class="headerlink" title="inline"></a>inline</h3><p>不要内联超过10行的代码</p>
+<p>以及析构函数、递归函数、虚函数</p>
+<h3 id="include"><a href="#include" class="headerlink" title="include"></a>include</h3><p>首先你需要避免使用<code>.</code>和<code>..</code></p>
+<p>若路径为<code>google-awesome-project/src/base/logging.h</code></p>
+<p>则格式如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;base/logging.h&quot;</span></span></span><br></pre></td></tr></table></figure>
+<p>假设此时有一<code>.cc</code>（谷歌的cpp喜欢用<code>.cc</code>作为文件后缀）</p>
+<p>实现一个<code>dir/foo.cc</code>，其函数原型在<code>dir2/foo.h</code>中</p>
+<p>此时头文件顺序为：</p>
+<ul>
+<li><code>dir2/foo.h</code>（可保证优先报错）</li>
+<li>C头文件</li>
+<li>C++头文件</li>
+<li>其他库的<code>.h</code>文件</li>
+<li>本项目的<code>.h</code>文件</li>
+</ul>
+<p>按<strong>字母顺序</strong>分别对每种类型的头文件进行二次排序是不错的主意。</p>
+<h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><blockquote>
+<p>  等我学到面向对象再说</p>
+</blockquote>
+<h2 id="函数-1"><a href="#函数-1" class="headerlink" title="函数"></a>函数</h2><h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
+<li>按引用传递必须加上const</li>
+<li>若需要修改值，使用指针</li>
+</ul>
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><h3 id="命名空间（未记录）"><a href="#命名空间（未记录）" class="headerlink" title="命名空间（未记录）"></a>命名空间（未记录）</h3><p>还没怎么用，以后补</p>
+<h3 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h3><p>最小化局部变量的作用域，并且尽量靠近第一次的使用地点</p>
+<p>避免以下操作：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i;</span><br><span class="line">i = <span class="built_in">f</span>(); <span class="comment">// 坏——初始化和声明分离</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> j = <span class="built_in">g</span>(); <span class="comment">// 好——初始化时声明</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; v;</span><br><span class="line">v.<span class="built_in">push_back</span>(<span class="number">1</span>); <span class="comment">// 用花括号初始化更好</span></span><br><span class="line">v.<span class="built_in">push_back</span>(<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">vector&lt;<span class="type">int</span>&gt; v = &#123;<span class="number">1</span>, <span class="number">2</span>&#125;; <span class="comment">// 好——v 一开始就初始化</span></span><br></pre></td></tr></table></figure>
+<p>但是需要注意，如果引起效率变低（构造函数多次使用）</p>
+<p>请放大作用域</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 低效的实现</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; ++i) &#123;</span><br><span class="line">    Foo f; <span class="comment">// 构造函数和析构函数分别调用 1000000 次!</span></span><br><span class="line">    f.<span class="built_in">DoSomething</span>(i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Foo f;                      <span class="comment">// 构造函数和析构函数只调用 1 次</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; ++i) &#123;</span><br><span class="line">    f.<span class="built_in">DoSomething</span>(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li>使用 C++ 的类型转换, 如 <code>static_cast&lt;&gt;()</code>. 不要使用 <code>int y = (int)x</code> 或 <code>int y = int(x)</code> 等转换方式</li>
+<li>不用流</li>
+<li>使用前缀形式 (<code>++i</code>)</li>
+<li>没必要使用无符号整数，不如通过断言指出非负数</li>
+<li><code>int16_t</code>, <code>uint32_t</code>, <code>int64_t</code> 等整型, 在需要确保整型大小时可以使用它们代替 <code>short</code>, <code>unsigned long long</code> 等<ul>
+<li>只使用 <code>int</code>. </li>
+<li>在合适的情况下, 推荐使用标准类型如 <code>size_t</code> 和 <code>ptrdiff_t</code></li>
+</ul>
+</li>
+<li>对于大整数, 使用 <code>int64_t</code></li>
+<li>除了防包含，尽量不用宏<ul>
+<li>如果使用，使用完成后立马<code>#undef</code></li>
+</ul>
+</li>
+<li>0<ul>
+<li>整数0</li>
+<li>实数0.0</li>
+<li>指针nullptr或者NULL</li>
+<li>字符串、字符<code>\0</code></li>
+</ul>
+</li>
+<li>只有数据成员：结构体。其他情况使用类</li>
+</ul>
 
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
+    </article>
+    <!-- license -->
     
-        
-        
-        
-        
+    <!-- paginator -->
+    <ul class="post-paginator">
+        <li class="next">
             
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2023/12/22/acm-20231222/" title="CF1907E. Good Triples">
+                    <div class="nextTitle">CF1907E. Good Triples</div>
+                </a>
             
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/12/23/C++Primer-pre/">
-                
-                <span class="abstract-title-text">C++ 成长计划</span>
-            </a>
-            <div class="abstract-content">
-                C++从入门到入土
-            </div>
-            <!-- read more -->
+        </li>
+        <li class="previous">
             
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/12/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/12/23</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
+        </li>
+    </ul>
+    <!-- comment -->
     
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="C++"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                C++
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="入门">入门</a>
-    
-</div>
+        <div class="post-comment">
+            <!-- 来必力 City 版安装代码 -->
 
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/12/22/acm-20231222/">
-                
-                <span class="abstract-title-text">CF1907E. Good Triples</span>
-            </a>
-            <div class="abstract-content">
-                数值进位
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/12/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/12/22</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="ACM"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                ACM
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="数学">数学</a>
-    
-</div>
 
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
             
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/12/22/Google%20C++%20%E5%BC%80%E5%8F%91%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">
-                
-                <span class="abstract-title-text">Google C++ 开发代码规范 · 笔记</span>
-            </a>
-            <div class="abstract-content">
-                google
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/12/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/12/22</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="C++"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                C++
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="规范">规范</a>
-    
-</div>
 
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
+            
+
+            
+
+            <!-- utteranc评论 -->
+
+
+            <!-- partial('_partial/comment/changyan') -->
+            <!--PC版-->
+
+
+            
+            
+
+            
+
+        </div>
     
-    <!-- paginator  -->
+    <!-- timeliness note -->
+    <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
+    
+    <!-- Mathjax -->
     
 </main>
 
                 <!-- profile -->
-                
-                    <div class="profile">
-    <img class="profile-avatar" alt="avatar" src= /avatar/ai.jpg />
-    <div class="profile-name">AoiJays</div>
-    
-        <div class="profile-signature">
-            Neworld1111
-        </div>
-    
-    
-        <div class="profile-social">
-            
-    
-        
-            
-                <a href="mailto:954436671@qq.com" class="iconfont-archer email" title=email ></a>
-            
-        
-    
-        
-            
-                <a href="//github.com/aoijays" class="iconfont-archer github" target="_blank" title=github></a>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-            
-                <a href="https://www.zhihu.com/people/Chirs2002" class="iconfont-archer zhihu" target="_blank" title=zhihu></a>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-            
-                <a href="https://space.bilibili.com/498088093" class="iconfont-archer bilibili" target="_blank" title=bilibili></a>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-
-        </div>
-    
-    
-        <div class="friends">
-            <div>
-                
-                FRIENDS
-            </div>
-            
-                
-                    <span>
-                        <a href="//aoijays.top/" target="_blank">aoiJays`s Gallery</a>
-                    </span>
-                
-            
-        </div>
-    
-    
-    
-    
-</div>
-
                 
             </div>
             <footer class="footer footer-unloaded">
@@ -814,6 +728,23 @@
 
         </div>
         <!-- toc -->
+        
+            <div class="toc-wrapper toc-wrapper-loding" style=
+
+
+
+
+
+
+
+    top:50vh;
+
+>
+                <div class="toc-catalog">
+                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+                </div>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Google-C-%E5%BC%80%E5%8F%91%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83"><span class="toc-number">1.</span> <span class="toc-text">Google C++ 开发代码规范</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E7%BA%A6%E5%AE%9A"><span class="toc-number">1.1.</span> <span class="toc-text">命名约定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%90%8D"><span class="toc-number">1.1.1.</span> <span class="toc-text">文件名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.2.</span> <span class="toc-text">类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">1.1.3.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F"><span class="toc-number">1.1.4.</span> <span class="toc-text">常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.5.</span> <span class="toc-text">函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8F"><span class="toc-number">1.1.6.</span> <span class="toc-text">宏</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="toc-number">1.2.</span> <span class="toc-text">头文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#define-%E4%BF%9D%E6%8A%A4"><span class="toc-number">1.2.1.</span> <span class="toc-text">define 保护</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#inline"><span class="toc-number">1.2.2.</span> <span class="toc-text">inline</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#include"><span class="toc-number">1.2.3.</span> <span class="toc-text">include</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB"><span class="toc-number">1.3.</span> <span class="toc-text">类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0-1"><span class="toc-number">1.4.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0"><span class="toc-number">1.4.1.</span> <span class="toc-text">参数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">1.5.</span> <span class="toc-text">作用域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%EF%BC%88%E6%9C%AA%E8%AE%B0%E5%BD%95%EF%BC%89"><span class="toc-number">1.5.1.</span> <span class="toc-text">命名空间（未记录）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="toc-number">1.5.2.</span> <span class="toc-text">局部变量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">1.6.</span> <span class="toc-text">其他</span></a></li></ol></li></ol>
+            </div>
         
         <!-- sidebar -->
         <div class="sidebar sidebar-hide">
@@ -998,6 +929,8 @@
         <!-- CNZZ -->
         
         <!-- async load share.js -->
+        
+            <script src="/scripts/share.js?v=20211217" async></script>
         
         <!-- mermaid -->
         
